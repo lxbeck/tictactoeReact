@@ -1,7 +1,7 @@
 import React from 'react';
 import TodoCard from './TodoCard';
 
-export default function TodoList({ todos, handleDeleteTodo }) {
+export default function TodoList({ todos, handleDeleteTodo, handleEditTodo }) {  
     return (
         <ul className='main'>
             {todos.map((todo, todoIndex) => (
@@ -9,7 +9,8 @@ export default function TodoList({ todos, handleDeleteTodo }) {
                     key={todoIndex} 
                     index={todoIndex} 
                     todoText={todo} 
-                    handleDeleteTodo={handleDeleteTodo}
+                    handleDeleteTodo={handleDeleteTodo}  
+                    handleEditTodo={handleEditTodo}
                 />
             ))}
         </ul>
